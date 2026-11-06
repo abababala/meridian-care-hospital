@@ -1,0 +1,71 @@
+backend:
+  name: github
+  repo: abababala/meridian-care-hospital
+  branch: main
+media_folder: assets/uploads
+public_folder: assets/uploads
+collections:
+  - name: site
+    label: Site content
+    files:
+      - name: settings
+        label: Site settings
+        file: data/settings.json
+        format: json
+        fields:
+          - {label: Hospital name, name: name, widget: string}
+          - {label: Tagline, name: tagline, widget: string}
+          - {label: Homepage headline, name: headline, widget: string}
+          - {label: Homepage text, name: subtext, widget: text}
+          - {label: Homepage photo, name: hero_image, widget: image, required: false}
+          - {label: Currency symbol, name: currency, widget: string}
+          - {label: Phone, name: phone, widget: string}
+          - {label: WhatsApp number (digits only), name: whatsapp, widget: string}
+          - {label: Email, name: email, widget: string}
+          - {label: Emergency number, name: emergency, widget: string}
+          - {label: Address, name: address, widget: string}
+          - {label: City, name: city, widget: string}
+          - {label: Opening hours, name: hours, widget: text}
+      - name: departments
+        label: Departments
+        file: data/departments.json
+        format: json
+        fields:
+          - label: Departments
+            name: items
+            widget: list
+            fields:
+              - {label: Name, name: name, widget: string}
+              - {label: Description, name: description, widget: text}
+              - {label: Photo, name: image, widget: image, required: false}
+      - name: doctors
+        label: Doctors
+        file: data/doctors.json
+        format: json
+        fields:
+          - label: Doctors
+            name: items
+            widget: list
+            fields:
+              - {label: Name, name: name, widget: string}
+              - {label: Specialty, name: specialty, widget: string}
+              - {label: Short bio, name: bio, widget: text}
+              - {label: Consultation fee (number only), name: fee, widget: string, required: false}
+              - {label: Photo, name: photo, widget: image, required: false}
+      - name: builder
+        label: Built by (services page)
+        file: data/builder.json
+        format: json
+        fields:
+          - {label: Name, name: name, widget: string}
+          - {label: Headline, name: headline, widget: string}
+          - {label: About me, name: about, widget: text}
+          - label: Services and skills
+            name: services
+            widget: list
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Description, name: description, widget: text}
+          - {label: Email, name: email, widget: string}
+          - {label: Phone, name: phone, widget: string}
+          - {label: WhatsApp number (digits only), name: whatsapp, widget: string}
