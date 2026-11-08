@@ -1,7 +1,46 @@
-{"items":[
-{"name":"Dr. Amina Bello","specialty":"Pediatrician","bio":"Cares for children from birth through adolescence, with a focus on growth and nutrition.","fee":"15,000","photo":""},
-{"name":"Dr. Chidi Okafor","specialty":"Cardiologist","bio":"Treats heart and blood pressure conditions and leads preventive heart screening.","fee":"25,000","photo":""},
-{"name":"Dr. Funmi Adeyemi","specialty":"Obstetrician and Gynecologist","bio":"Supports women through pregnancy, delivery and every stage of reproductive health.","fee":"20,000","photo":""},
-{"name":"Dr. Ibrahim Musa","specialty":"General Surgeon","bio":"Performs routine and emergency surgery with a focus on safe, fast recovery.","fee":"25,000","photo":""},
-{"name":"Dr. Ngozi Eze","specialty":"Dentist","bio":"Provides general and cosmetic dental care for adults and children.","fee":"12,000","photo":""},
-{"name":"Dr. Tunde Balogun","specialty":"General Practitioner","bio":"First point of contact for most concerns, guiding patients to the right specialist.","fee":"10,000","photo":""}]}
+{
+  "items": [
+    {
+      "name": "Dr. Amina Bello",
+      "specialty": "Pediatrician",
+      "bio": "Cares for children from birth through adolescence, with a focus on growth and nutrition.",
+      "fee": "15,000",
+      "photo": "/assets/uploads/IMG_4885.jpeg"
+    },
+    {
+      "name": "Dr. Chidi Okafor",
+      "specialty": "Cardiologist",
+      "bio": "Treats heart and blood pressure conditions and leads preventive heart screening.",
+      "fee": "25,000",
+      "photo": "/assets/uploads/IMG_4883.jpeg"
+    },
+    {
+      "name": "Dr. Funmi Adeyemi",
+      "specialty": "Obstetrician and Gynecologist",
+      "bio": "Supports women through pregnancy, delivery and every stage of reproductive health.",
+      "fee": "20,000",
+      "photo": "/assets/uploads/IMG_4881.jpeg"
+    },
+    {
+      "name": "Dr. Ibrahim Musa",
+      "specialty": "General Surgeon",
+      "bio": "Performs routine and emergency surgery with a focus on safe, fast recovery.",
+      "fee": "25,000",
+      "photo": "/assets/uploads/IMG_4880.jpeg"
+    },
+    {
+      "name": "Dr. Ngozi Eze",
+      "specialty": "Dentist",
+      "bio": "Provides general and cosmetic dental care for adults and children.",
+      "fee": "12,000",
+      "photo": "/assets/uploads/IMG_4886.jpeg"
+    },
+    {
+      "name": "Dr. Adebalogun Aminat Kemi",
+      "specialty": "General Practitioner",
+      "bio": "First point of contact for most concerns, guiding patients to the right specialist.",
+      "fee": "10,000",
+      "photo": "/assets/uploads/IMG_4882.jpeg"
+    }
+  ]
+}
