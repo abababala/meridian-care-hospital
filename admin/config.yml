@@ -26,6 +26,7 @@ collections:
           - {label: Address, name: address, widget: string}
           - {label: City, name: city, widget: string}
           - {label: Opening hours, name: hours, widget: text}
+          - {label: Homepage photo crop focus, name: hero_focus, widget: select, required: false, default: upper, hint: Which part of the photo stays visible when it is cropped to fit, options: [{label: Top, value: top}, {label: Upper (good for faces), value: upper}, {label: Centre, value: center}, {label: Bottom, value: bottom}]}
       - name: departments
         label: Departments
         file: data/departments.json
@@ -37,7 +38,8 @@ collections:
             fields:
               - {label: Name, name: name, widget: string}
               - {label: Description, name: description, widget: text}
-              - {label: Photo, name: image, widget: image, required: false}
+              - {label: Photo, name: image, widget: image, required: false, hint: Shown in a fixed 4 by 3 frame and cropped to fit}
+              - {label: Crop focus, name: focus, widget: select, required: false, default: top, hint: Which part of the photo stays visible when it is cropped to fit, options: [{label: Top, value: top}, {label: Upper (good for faces), value: upper}, {label: Centre, value: center}, {label: Bottom, value: bottom}]}
       - name: doctors
         label: Doctors
         file: data/doctors.json
@@ -51,7 +53,8 @@ collections:
               - {label: Specialty, name: specialty, widget: string}
               - {label: Short bio, name: bio, widget: text}
               - {label: Consultation fee (number only), name: fee, widget: string, required: false}
-              - {label: Photo, name: photo, widget: image, required: false}
+              - {label: Photo, name: photo, widget: image, required: false, hint: Shown in a fixed portrait frame and cropped to fit}
+              - {label: Crop focus, name: focus, widget: select, required: false, default: upper, hint: Which part of the photo stays visible when it is cropped to fit, options: [{label: Top, value: top}, {label: Upper (good for faces), value: upper}, {label: Centre, value: center}, {label: Bottom, value: bottom}]}
       - name: builder
         label: Built by (services page)
         file: data/builder.json
@@ -69,3 +72,180 @@ collections:
           - {label: Email, name: email, widget: string}
           - {label: Phone, name: phone, widget: string}
           - {label: WhatsApp number (digits only), name: whatsapp, widget: string}
+      - name: home
+        label: Homepage and page text
+        file: data/home.json
+        format: json
+        fields:
+          - label: "1. Colours"
+            name: look
+            widget: object
+            required: false
+            collapsed: true
+            fields:
+              - {label: Dark colour (headings), name: navy, widget: color, required: false}
+              - {label: Main colour (buttons and details), name: teal, widget: color, required: false}
+              - {label: Emergency button colour, name: coral, widget: color, required: false}
+          - label: "2. Menu names"
+            name: nav
+            widget: object
+            required: false
+            collapsed: true
+            fields:
+              - {label: Home, name: home, widget: string, required: false, hint: Leave empty to use the default}
+              - {label: Departments, name: dep, widget: string, required: false}
+              - {label: Doctors, name: doc, widget: string, required: false}
+              - {label: Book appointment, name: book, widget: string, required: false}
+          - label: "3. Top of the homepage"
+            name: hero
+            widget: object
+            required: false
+            collapsed: true
+            fields:
+              - {label: Main button name, name: btn1, widget: string, required: false}
+              - {label: Emergency button name, name: btn2, widget: string, required: false}
+              - {label: Floating card 1 title, name: c1t, widget: string, required: false}
+              - {label: Floating card 1 text, name: c1x, widget: string, required: false}
+              - {label: Floating card 2 title, name: c2t, widget: string, required: false}
+              - {label: Floating card 2 text, name: c2x, widget: string, required: false}
+          - label: "4. Quick booking strip"
+            name: qb
+            widget: object
+            required: false
+            collapsed: true
+            fields:
+              - {label: Title, name: title, widget: string, required: false}
+              - {label: Button name, name: btn, widget: string, required: false}
+          - label: "5. Numbers strip"
+            name: stats
+            widget: list
+            required: false
+            collapsed: true
+            summary: "{{fields.label}}"
+            fields:
+              - {label: Number or text, name: num, widget: string}
+              - {label: Label, name: label, widget: string}
+          - label: "6. Section headings"
+            name: sec
+            widget: object
+            required: false
+            collapsed: true
+            fields:
+              - {label: Departments heading, name: dep, widget: string, required: false}
+              - {label: All departments link, name: dep_link, widget: string, required: false}
+              - {label: Why us heading, name: why, widget: string, required: false}
+              - {label: Doctors heading, name: doc, widget: string, required: false}
+              - {label: All doctors link, name: doc_link, widget: string, required: false}
+              - {label: Patient stories heading, name: stories, widget: string, required: false}
+              - {label: Insurance heading, name: ins, widget: string, required: false}
+              - {label: FAQ heading, name: faq, widget: string, required: false}
+              - {label: Map heading, name: map, widget: string, required: false}
+          - {label: "Departments shown on the homepage", name: dep_count, widget: number, value_type: int, min: 1, max: 24, required: false, hint: Empty means 6}
+          - label: "7. Why families choose us"
+            name: why
+            widget: list
+            required: false
+            collapsed: true
+            summary: "{{fields.title}}"
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Text, name: text, widget: text}
+          - label: "8. Patient stories"
+            name: stories
+            widget: list
+            required: false
+            collapsed: true
+            summary: "{{fields.name}}"
+            fields:
+              - {label: Quote, name: quote, widget: text}
+              - {label: Name, name: name, widget: string}
+              - {label: Detail, name: detail, widget: string, required: false}
+              - {label: Show on site, name: show, widget: boolean, default: true}
+          - label: "9. Accepted insurance"
+            name: insurance
+            widget: list
+            required: false
+            collapsed: true
+            hint: One provider per item. Empty list hides the section
+            field: {label: Provider, name: p, widget: string}
+          - label: "10. Patient FAQ"
+            name: faq
+            widget: list
+            required: false
+            collapsed: true
+            summary: "{{fields.q}}"
+            fields:
+              - {label: Question, name: q, widget: string}
+              - {label: Answer, name: a, widget: text, hint: "You can type {hours} or {phone} to insert them automatically"}
+              - {label: Show on site, name: show, widget: boolean, default: true}
+          - label: "11. Map and directions"
+            name: map
+            widget: object
+            required: false
+            collapsed: true
+            fields:
+              - {label: Google Maps embed link, name: embed, widget: string, required: false, hint: On Google Maps tap Share then Embed a map then copy only the link inside src}
+              - {label: Directions button name, name: btn, widget: string, required: false}
+          - label: "12. Call to action"
+            name: cta
+            widget: object
+            required: false
+            collapsed: true
+            fields:
+              - {label: Title, name: title, widget: string, required: false}
+              - {label: Text, name: text, widget: text, required: false}
+              - {label: Button name, name: btn, widget: string, required: false}
+          - label: "13. Page titles"
+            name: pages
+            widget: object
+            required: false
+            collapsed: true
+            fields:
+              - {label: Departments page title, name: dep_t, widget: string, required: false}
+              - {label: Departments page text, name: dep_s, widget: text, required: false}
+              - {label: Doctors page title, name: doc_t, widget: string, required: false}
+              - {label: Doctors page text, name: doc_s, widget: text, required: false}
+              - {label: Booking page title, name: con_t, widget: string, required: false}
+              - {label: Booking page text, name: con_s, widget: text, required: false}
+              - {label: Built by heading, name: by_t, widget: string, required: false}
+          - label: "14. Form labels and buttons"
+            name: form
+            widget: object
+            required: false
+            collapsed: true
+            fields:
+              - {label: Name label, name: name, widget: string, required: false}
+              - {label: Phone label, name: phone, widget: string, required: false}
+              - {label: Department label, name: dept, widget: string, required: false}
+              - {label: Date label, name: date, widget: string, required: false}
+              - {label: Message label, name: msg, widget: string, required: false}
+              - {label: Send by email button, name: email_btn, widget: string, required: false}
+              - {label: WhatsApp button, name: wa_btn, widget: string, required: false}
+              - {label: Department card link, name: tile_btn, widget: string, required: false}
+              - {label: Doctor card link, name: doc_btn, widget: string, required: false}
+              - {label: Fee label, name: fee_label, widget: string, required: false}
+          - label: "15. Footer"
+            name: footer
+            widget: object
+            required: false
+            collapsed: true
+            fields:
+              - {label: Visit heading, name: visit, widget: string, required: false}
+              - {label: Contact heading, name: contact, widget: string, required: false}
+              - {label: Extra footer note, name: note, widget: string, required: false}
+          - label: "16. Hide sections"
+            name: ui
+            widget: object
+            required: false
+            collapsed: true
+            fields:
+              - {label: Hide quick booking strip, name: hide_quickbook, widget: boolean, required: false}
+              - {label: Hide numbers strip, name: hide_stats, widget: boolean, required: false}
+              - {label: Hide departments, name: hide_departments, widget: boolean, required: false}
+              - {label: Hide why us, name: hide_why, widget: boolean, required: false}
+              - {label: Hide doctors carousel, name: hide_doctors, widget: boolean, required: false}
+              - {label: Hide patient stories, name: hide_stories, widget: boolean, required: false}
+              - {label: Hide insurance, name: hide_insurance, widget: boolean, required: false}
+              - {label: Hide FAQ, name: hide_faq, widget: boolean, required: false}
+              - {label: Hide map, name: hide_map, widget: boolean, required: false}
+              - {label: Hide call to action, name: hide_cta, widget: boolean, required: false}
