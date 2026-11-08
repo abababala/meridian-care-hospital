@@ -1,0 +1,18 @@
+{
+"look":{"navy":"#0b2545","teal":"#148f8b","coral":"#d95a43"},
+"nav":{"home":"Home","dep":"Departments","doc":"Doctors","book":"Book appointment"},
+"hero":{"btn1":"Book an appointment","btn2":"Emergency","c1t":"Open 24 hours","c1x":"Emergency care","c2t":"Mon to Sat","c2x":"Outpatient 8am to 6pm"},
+"qb":{"title":"Quick booking","btn":"Request appointment"},
+"stats":[{"num":"8","label":"Departments"},{"num":"6","label":"Specialist doctors"},{"num":"24/7","label":"Emergency care"}],
+"dep_count":6,
+"sec":{"dep":"Our departments","dep_link":"See all departments","why":"Why families choose us","doc":"Meet our doctors","doc_link":"See all doctors","stories":"Patient stories","ins":"Accepted insurance","faq":"Questions patients ask","map":"Find us"},
+"why":[{"title":"Experienced specialists","text":"Doctors across every department, with time set aside to listen before they treat."},{"title":"Clear communication","text":"You are told what is happening, what it costs, and what comes next."},{"title":"Care that continues","text":"From first consultation to recovery, your records and follow-ups stay in one place."}],
+"stories":[{"quote":"Placeholder story: replace this with a real patient’s words.","name":"Patient name","detail":"Department or year","show":true},{"quote":"Placeholder story: a second short patient comment goes here.","name":"Patient name","detail":"Department or year","show":true}],
+"insurance":[],
+"faq":[{"q":"How do I book an appointment?","a":"Use the booking page or the quick booking strip on the homepage. Our team confirms by phone.","show":true},{"q":"What are your opening hours?","a":"{hours}","show":true},{"q":"What does a consultation cost?","a":"Each doctor’s consultation fee is shown on their card.","show":true},{"q":"How do I reach you in an emergency?","a":"Call {phone} at any time.","show":true}],
+"map":{"embed":"","btn":"Get directions"},
+"cta":{"title":"Need to see a doctor?","text":"Send an appointment request and our team will confirm by phone.","btn":"Book an appointment"},
+"pages":{"dep_t":"Departments","dep_s":"Choose a department to request an appointment.","doc_t":"Our doctors","doc_s":"Specialists you can book directly.","con_t":"Book an appointment","con_s":"Fill in the form and send it by email or WhatsApp. We will call to confirm your time.","by_t":"What I do"},
+"form":{"name":"Full name","phone":"Phone number","dept":"Department","date":"Preferred date","msg":"Message","email_btn":"Send by email","wa_btn":"Send on WhatsApp","tile_btn":"Book","doc_btn":"Request appointment","fee_label":"Consultation:"},
+"footer":{"visit":"Visit","contact":"Contact","note":""}
+}
