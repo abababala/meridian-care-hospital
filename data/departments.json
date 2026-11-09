@@ -3,42 +3,50 @@
     {
       "name": "General Surgery Department",
       "description": "Check-ups, diagnosis and ongoing care for common and long-term conditions.",
-      "image": "/assets/uploads/IMG_4893.jpeg"
+      "image": "/assets/uploads/IMG_4893.jpeg",
+      "focus": "top"
     },
     {
       "name": "Pediatrics",
       "description": "Gentle care for babies, children and teenagers, including vaccinations.",
-      "image": "/assets/uploads/IMG_4894.jpeg"
+      "image": "/assets/uploads/IMG_4894.jpeg",
+      "focus": "top"
     },
     {
       "name": "Maternity and Gynecology",
       "description": "Antenatal care, safe delivery and women’s health services.",
-      "image": "/assets/uploads/IMG_4892.jpeg"
+      "image": "/assets/uploads/IMG_4892.jpeg",
+      "focus": "top"
     },
     {
       "name": "Cardiology",
       "description": "Heart screening, blood pressure management and cardiac follow-up.",
-      "image": "/assets/uploads/IMG_4891.jpeg"
+      "image": "/assets/uploads/IMG_4939.jpeg",
+      "focus": "top"
     },
     {
       "name": "Surgery",
       "description": "Planned and emergency procedures with dedicated recovery support.",
-      "image": "/assets/uploads/IMG_4887.jpeg"
+      "image": "/assets/uploads/IMG_4887.jpeg",
+      "focus": "top"
     },
     {
       "name": "Dentistry",
       "description": "Routine dental care, cleaning, fillings and cosmetic treatment.",
-      "image": "/assets/uploads/IMG_4888.jpeg"
+      "image": "/assets/uploads/IMG_4888.jpeg",
+      "focus": "top"
     },
     {
       "name": "Eye Care",
       "description": "Vision tests, glasses and treatment for eye conditions.",
-      "image": "/assets/uploads/IMG_4889.jpeg"
+      "image": "/assets/uploads/IMG_4889.jpeg",
+      "focus": "top"
     },
     {
       "name": "Laboratory and Diagnostics",
       "description": "Blood tests, imaging and fast, accurate results.",
-      "image": "/assets/uploads/IMG_4890.jpeg"
+      "image": "/assets/uploads/IMG_4890.jpeg",
+      "focus": "top"
     }
   ]
 }
